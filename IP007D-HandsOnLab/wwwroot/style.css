@@ -1,0 +1,67 @@
+﻿html, body {
+    height: 100%;
+}
+
+div {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 5px;
+}
+
+#külső {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#kérdés_szöveg {
+   
+}
+
+#középső {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+#válaszok {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#vezérlő {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#kép {
+    overflow: hidden;
+    flex-shrink:0;
+}
+
+.gomb {
+    padding: 20px;
+    width: 80px;
+    background-color: lightslategrey;
+    text-align: center;
+}
+
+.kerdes {
+}
+
+.kattintható:hover{
+    background-color: lightgoldenrodyellow;
+    color: black;
+}
+
+.jó{
+    background-color: lightgreen;
+    color: white;
+}
+
+.rossz {
+    background-color: lightcoral;
+    color: white;
+}
