@@ -3,16 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="main.js"></script>
 </head>
 <body>
     <div id="eredmeny"></div>
-
     <script>
-        fetch('/questions/all')
-            .then(response => response.json())
-            .then(data => console.log(data)
-        );
-
         function kiíratás(lista) {
             console.log(lista)
             for (var i = 0; i < lista.length; i++) {

@@ -9,13 +9,18 @@ namespace IP007D_HandsOnLab.Controllers
     public class BoatController : ControllerBase
     {
         [HttpGet]
-        [Route("questions/all")]
-        public ActionResult Kerdes()
+        [Route("questions/{sorszam}")]
+        public ActionResult Kerdes(int sorszam)
         {
             HajosContext context = new HajosContext();
-            var kerdesek = from x in context.Questions select x.Question1;
+            //var kerdesek = from x in context.Questions select x.Question1;
+            var kerdes = (from x in context.Questions
+                          where x.QuestionId == sorszam
+                          select x).FirstOrDefault();
 
-            return new JsonResult(kerdesek);
+            if (kerdes == null) return BadRequest("Nincs ilyen sorszamu kerdes.");
+
+            return new JsonResult(kerdes);
         }
     }
 }
